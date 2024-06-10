@@ -13,9 +13,9 @@ function App() {
         }
     }, [expression]);
     return (
-        <div className="bg-black w-screen h-screen flex flex-col text-white  justify-center items-center overflow-hidden">
-            <div className="shadow-2xl shadow-slate-500 rounded-lg h-[80vh] max-w-[100vw] sm:max-w-sm w-sm mb-8">
-                <div className="min-h-[20%] bg-red-700 p-4 rounded-t-xl">
+        <div className="bg-black w-screen h-screen sm:flex md:flex-col text-white  sm:justify-center sm:items-center overflow-hidden">
+            <div className=" sm:shadow-2xl shadow-slate-500 rounded-lg min-h-[80vh] max-h-[90vh] max-w-[100vw] sm:max-w-sm mb-8">
+                <div className="min-h-[20vh] bg-red-700 p-4 rounded-t-xl">
                     <p className="text-end  items-start text-4xl overflow-hidden">
                         {expression}
                     </p>

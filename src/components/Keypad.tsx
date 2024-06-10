@@ -3,18 +3,13 @@ import React from "react";
 interface KeypadProps {
     expression: string;
     setExpression: React.Dispatch<React.SetStateAction<string>>;
-    result :string;
+    result: string;
     setResult: React.Dispatch<React.SetStateAction<string>>;
 }
 
-function Keypad({
-    expression,
-    setExpression,
-    setResult,
-    result,
-}: KeypadProps) {
+function Keypad({ expression, setExpression, setResult, result }: KeypadProps) {
     return (
-        <div className="border-2 min-h-[80%] grid grid-cols-4  bg-black p-1 rounded-b-lg">
+        <div className="border-2 min-h-[80vh] grid grid-cols-4  bg-black p-1 rounded-b-lg">
             <button
                 className="p-6 m-0.5 bg-black rounded-lg hover:bg-slate-800 text-xl "
                 onClick={() => {
@@ -27,7 +22,7 @@ function Keypad({
             <button
                 className="p-6 m-0.5 bg-black rounded-lg hover:bg-slate-800 text-xl "
                 onClick={() => {
-                    setExpression(" (");
+                    setExpression(expression + " (");
                 }}
             >
                 (
@@ -35,7 +30,7 @@ function Keypad({
             <button
                 className="p-6 m-0.5 bg-black rounded-lg hover:bg-slate-800 text-xl "
                 onClick={() => {
-                    setExpression(") ");
+                    setExpression(expression + ") ");
                 }}
             >
                 )
@@ -166,7 +161,7 @@ function Keypad({
                 className="p-6 m-0.5 bg-black rounded-lg hover:bg-slate-800 text-xl "
                 onClick={() => {
                     setExpression(result);
-                    setResult("0")
+                    setResult("0");
                 }}
             >
                 =
