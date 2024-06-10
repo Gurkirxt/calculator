@@ -37,8 +37,15 @@ function Keypad({ expression, setExpression, setResult, result }: KeypadProps) {
             </button>
             <button
                 className="p-6 m-0.5 bg-black rounded-lg  sm:hover:bg-slate-800 active:bg-red-700 text-xl "
-                onClick={() =>
-                    setExpression(expression.slice(0, expression.length - 1))
+                onClick={() =>{
+                    if(expression.length>1){
+                        setExpression(expression.slice(0, expression.length - 1))
+                    }
+                    else{
+                        setExpression("")
+                    }
+                }
+                   
                 }
             >
                 &#x21e6;
